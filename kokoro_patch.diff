@@ -1,0 +1,27 @@
+diff --git a/kokoro.py b/kokoro.py
+index 8e40530..e6f2398 100644
+--- a/kokoro.py
++++ b/kokoro.py
+@@ -142,6 +142,7 @@ def generate(model, text, voicepack, lang='a', speed=1, ps=None):
+     if not tokens:
+         return None
+     elif len(tokens) > 510:
++        raise("Too long")
+         tokens = tokens[:510]
+         print('Truncated to 510 tokens')
+     ref_s = voicepack[len(tokens)]
+diff --git a/models.py b/models.py
+index 516ad7d..b7235f0 100644
+--- a/models.py
++++ b/models.py
+@@ -1,8 +1,8 @@
+ # https://github.com/yl4579/StyleTTS2/blob/main/models.py
+-from istftnet import AdaIN1d, Decoder
++from .istftnet import AdaIN1d, Decoder
+ from munch import Munch
+ from pathlib import Path
+-from plbert import load_plbert
++from .plbert import load_plbert
+ from torch.nn.utils import weight_norm, spectral_norm
+ import json
+ import numpy as np
