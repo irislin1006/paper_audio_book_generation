@@ -1,4 +1,13 @@
 pandas
+jupyter
 transformers
 beautifulsoup4
 moviepy==1.0.3
+soundfile
+tqdm
+pydub
+nltk
+phonemizer 
+torch
+scipy 
+munch
