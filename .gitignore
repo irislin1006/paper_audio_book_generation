@@ -4,4 +4,4 @@
 *.pth
 *.onnx
 *.pt
-**kokoro**
+kokoro**/
