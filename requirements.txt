@@ -1,0 +1,4 @@
+pandas
+transformers
+beautifulsoup4
+moviepy==1.0.3
